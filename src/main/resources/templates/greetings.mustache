@@ -1,0 +1,8 @@
+{{>layouts/header}}
+    {{# id}}
+        <h1>{{id}} {{username}} Hello! </h1>
+    {{/ id}}
+    {{^ id}}
+        <h1>{{username}} Hello! </h1>
+    {{/ id}}
+{{>layouts/footer}}
