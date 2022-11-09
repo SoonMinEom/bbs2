@@ -6,9 +6,13 @@
     <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <p class="card-text">{{content}}</p>
-        <a href="/articles/list" class="btn btn-primary">글목록</a>
+        <a href="/articles/{{id}}/edit" class="btn btn-danger">글 수정</a>
+        <a href="/articles/{{id}}/delete" class="btn btn-danger">글 삭제</a>
     </div>
 {{/article}}
 </div>
-
+{{^article}}
+    {{message}}번 글이 삭제되었습니다.
+{{/article}}
+<a href="/articles/list" class="btn btn-primary">글 목록</a>
 {{>layouts/footer}}
